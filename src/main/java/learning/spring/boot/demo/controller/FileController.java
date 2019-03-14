@@ -13,7 +13,7 @@ import java.io.*;
 
 @Component
 @RestController()
-@RequestMapping(value = "/file")
+@RequestMapping(value = "/api/file")
 public class FileController extends AbstractController {
 
     @PostMapping(value = "/uploadFile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
