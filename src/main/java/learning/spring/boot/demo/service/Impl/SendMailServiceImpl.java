@@ -44,6 +44,6 @@ public class SendMailServiceImpl implements SendEmailService {
         multipart.addBodyPart(attachPart);
         msg.setContent(multipart);
         Transport.send(msg);
-        return false;
+        return true;
     }
 }
