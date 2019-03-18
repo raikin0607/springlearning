@@ -1,6 +1,6 @@
 package learning.spring.boot.demo.scheduled;
 
-import learning.spring.boot.demo.model.Product;
+import learning.spring.boot.demo.model.ProductModel;
 import learning.spring.boot.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -51,9 +51,9 @@ public class SchedulerProduct {
             Date now = new Date();
             String strDate = sdf.format(now);
             System.out.println("Java cron job expression Start:: " + strDate);
-            Collection<Product> listProduct = new ArrayList<>();
-            listProduct = productService.getProductList();
-            for(Product pro : listProduct ) {
+            Collection<ProductModel> listProductModel = new ArrayList<>();
+            listProductModel = productService.getProductList();
+            for(ProductModel pro : listProductModel) {
                 System.out.println("Java cron job expression:: " + pro.getId());
                 System.out.println("Java cron job expression:: " + pro.getName());
             }

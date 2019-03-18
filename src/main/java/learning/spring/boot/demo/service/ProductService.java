@@ -1,17 +1,17 @@
 package learning.spring.boot.demo.service;
 
-import learning.spring.boot.demo.model.Product;
+import learning.spring.boot.demo.model.ProductModel;
 
 import java.util.Collection;
 
 
 public interface ProductService {
 
-    boolean createProduct(Product product);
+    boolean createProduct(ProductModel productModel);
 
-    boolean updateProduct(Product product, String id);
+    boolean updateProduct(ProductModel productModel, Long id);
 
-    boolean deleteProduct(String id);
+    boolean deleteProduct(Long id);
 
-    Collection<Product> getProductList();
+    Collection<ProductModel> getProductList();
 }
